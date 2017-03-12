@@ -1,14 +1,19 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#home'
-  get 'static_pages/home'
-  get '/rsvp', to: 'guests#new'
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
 
-  resources :gifts
-  resources :photos
-  resources :travels
-  resources :stories
-  resources :guests
-  resources :events
+    root to: 'static_pages#home'
+    get 'static_pages/home'
+    get '/rsvp', to: 'guests#new'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    resources :gifts
+    resources :photos
+    resources :travels
+    resources :stories
+    resources :guests
+    resources :events
+
+  end
+  get '*path', to: redirect("/#{I18n.locale}/%{path}")
+  get '', to: redirect("/#{I18n.default_locale}/")
+
 end

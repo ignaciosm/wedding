@@ -1,0 +1,17 @@
+es:
+  nav:
+    story: "Nuestra Historia"
+    events: "Eventos"
+    travel: "Viaje"
+    rsvp: "Confirma"
+    gifts: "Regalos"
+    photos: "Fotos"
+  stories:
+    h1: "Nuestra Historia"
+    
+
+  date:
+    order:
+      - :day
+      - :month
+      - :year

@@ -3,7 +3,7 @@
 
 <p id="notice"><%= notice %></p>
 <div class="post-content">
-<h1>Our Story</h1>
+<h1><%= t 'stories.h1' %></h1>
 
   <tbody>
     <% @stories.order(:id).each do |story| %>
