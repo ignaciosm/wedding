@@ -28,6 +28,16 @@
     <%= f.text_field :email %>
   </div>
 
+  <div class="inline">
+    <%= f.label :yesno, "Yes, I'll be there!", :value => true %>
+    <%= f.radio_button :yesno, true %>
+  </div>
+
+  <div class="inline">
+    <%= f.label :yesno, "No, I can't", :value => false %>
+    <%= f.radio_button :yesno, false %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
